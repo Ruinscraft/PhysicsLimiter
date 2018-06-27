@@ -42,8 +42,6 @@ public class PhysicsLimiterPlugin extends JavaPlugin implements Listener {
 
 		int amt = incrementChunk(chunk);
 		
-		System.out.println(amt);
-		
 		if (amt > physicsLimit) {
 			event.setCancelled(true);
 		}
