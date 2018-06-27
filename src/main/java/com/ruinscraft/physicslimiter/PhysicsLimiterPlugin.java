@@ -3,7 +3,6 @@ package com.ruinscraft.physicslimiter;
 import java.util.*;
 
 import org.bukkit.Chunk;
-import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPhysicsEvent;
@@ -37,12 +36,7 @@ public class PhysicsLimiterPlugin extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void onPhysics(BlockPhysicsEvent event) {
-		Block block = event.getBlock();
-		Chunk chunk = block.getChunk();
-
-		int amt = incrementChunk(chunk);
-		
-		if (amt > physicsLimit) {
+		if (incrementChunk(event.getBlock().getChunk()) > physicsLimit) {
 			event.setCancelled(true);
 		}
 	}
