@@ -37,6 +37,7 @@ public class PhysicsLimiterPlugin extends JavaPlugin implements Listener {
 	@Override
 	public void onDisable() {
 		chunkUpdates.clear();
+		notifiedAt.clear();
 	}
 	
 	@EventHandler
