@@ -47,6 +47,7 @@ public class PhysicsLimiterPlugin extends JavaPlugin implements Listener {
 		
 		interval = getConfig().getLong("interval");
 		physicsLimit = getConfig().getLong("physics-limit");
+		armorStandGravityLimit = getConfig().getLong("armor-stand-gravity-limit");
 
 		getServer().getPluginManager().registerEvents(this, this);
 		getServer().getScheduler().runTaskTimerAsynchronously(this, () -> {
