@@ -1,3 +1,6 @@
 # The amount of ticks between check
 interval: 40
+# The amount of physics updates allowed per chunk
 physics-limit: 8000
+# The amount of Armor Stands per chunk before gravity is disabled on them
+armor-stand-gravity-limit: 20
